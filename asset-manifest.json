@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/ecart/static/css/main.a1c73cd2.css",
+    "main.js": "/ecart/static/js/main.9663a4a8.js",
+    "static/media/sports.png": "/ecart/static/media/sports.487ded13869aaac04e5a.png",
+    "static/media/Electronic.png": "/ecart/static/media/Electronic.295c449362d468f20b86.png",
+    "static/media/grocerys.png": "/ecart/static/media/grocerys.dbd3a8746e2866a7644c.png",
+    "static/media/mobile.png": "/ecart/static/media/mobile.c60a20696f56f408d60e.png",
+    "static/media/books.png": "/ecart/static/media/books.5d7b5c3d0f674e69fb4a.png",
+    "static/media/all.png": "/ecart/static/media/all.7a2d3bd862a1485d70c4.png",
+    "static/media/fashion.png": "/ecart/static/media/fashion.abe319030995ed20c454.png",
+    "static/media/appliance.png": "/ecart/static/media/appliance.85f4f4baeba2a3b0ed43.png",
+    "static/media/offer4.png": "/ecart/static/media/offer4.e626898c39f31b55f125.png",
+    "static/media/offer2.png": "/ecart/static/media/offer2.319e0431f091a64f69dd.png",
+    "static/media/offer8.png": "/ecart/static/media/offer8.ee57bf5e849e1da2f577.png",
+    "static/media/offer6.png": "/ecart/static/media/offer6.2efa70f28d6ab5cbc4ed.png",
+    "static/media/offer1.png": "/ecart/static/media/offer1.baeea33a8432758f389c.png",
+    "static/media/offer3.png": "/ecart/static/media/offer3.05967b3cc0984becd372.png",
+    "static/media/offer5.png": "/ecart/static/media/offer5.29dcdd50f02b7385bffd.png",
+    "static/media/beauty.png": "/ecart/static/media/beauty.39bd9a6cc851fb8ecc7c.png",
+    "static/media/offer7.png": "/ecart/static/media/offer7.bfa17e0fa9f90d38ec84.png",
+    "static/media/home.png": "/ecart/static/media/home.cacabc7caf68c241c8cc.png",
+    "index.html": "/ecart/index.html",
+    "main.a1c73cd2.css.map": "/ecart/static/css/main.a1c73cd2.css.map",
+    "main.9663a4a8.js.map": "/ecart/static/js/main.9663a4a8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1c73cd2.css",
+    "static/js/main.9663a4a8.js"
+  ]
+}
