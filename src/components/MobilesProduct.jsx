@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import './Homeproduct.css';
-import ProductDetails from '../Pages/ProductDetails';
+import React,{useState,useEffect} from 'react'
+import Footer from './Footer';
+import { CiSearch } from "react-icons/ci";
+import { CgProfile } from "react-icons/cg";
 import { IoCartOutline } from "react-icons/io5";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { AiFillThunderbolt } from "react-icons/ai";
+
 import {Link} from 'react-router-dom'
 
-const HomeProducts = () => {
-  const [product, setProduct] = useState([]);
-
-  const renderStars = (rating) => {
+const MobilesProduct = () => {
+   const[val,setVal]=useState('');
+    const renderStars = (rating) => {
 const star=[];
 for(let i=1;i<=5;i++){
   if(i<=Math.floor(rating)){
@@ -23,27 +25,73 @@ for(let i=1;i<=5;i++){
   }
   return star
 }
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then(res => res.json())
-      .then(data => {
-        setProduct(data);
-        console.log(data);
-      });
-  }, []);
+const [product,setData]=useState([]);
+ const query = val.toLowerCase();
+
+  const filtered = product.filter(p =>
+    p.title.toLowerCase().includes(query) ||
+    p.description.toLowerCase().includes(query)||
+    p.category.toLowerCase().includes(query)
+  );
+useEffect(() => {
+  fetch("https://dummyjson.com/products/category/smartphones")
+    .then(res => {
+      if (!res.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return res.json(); 
+    })
+    .then(data => {
+      setData(data.products);
+    })
+    .catch(error => {
+      console.error("Fetch error:", error);
+    });
+}, []);
+
 
   return (
+
     <div>
-      <div className="product-container">
+      <header style={{paddingBottom:"50px"}}>
+        <div className="header-container">
+
+
+
+<div className="header-login-container">
+<h3> About</h3>
+ </div>
+
+
+
+
+ <div className="header-login-container">
+<h3> Contact</h3>
+
+</div>
+
+ <div className="header-login-container">
+          <span> <CgProfile />
+</span><h3>Login</h3>
+        </div>
+
+        </div>
+<br>
+</br>
+<br></br>
+      </header>
+           <div className="product-container">
         {
-          product.map((item, index) => {
+          filtered.map((item, index) => {
             const originalPrice = item.price * 10;
             const discountedPrice = (originalPrice * 50) / 100; // 50% off
 
             return (
               <div className="product-card" key={index}>
-            <Link to={`/productDetails/${item.id}`}>
-                <img src={item.image} className="product-images" alt={item.title} /></Link>
+            <Link to={`/allProductsDe/${item.id}`}>
+                <img src={item.
+thumbnail
+} className="product-images" alt={item.title} /></Link>
                 <h4 className="product-title">{item.title}</h4>
 
                 <h5 className="product-price-container">
@@ -69,7 +117,7 @@ for(let i=1;i<=5;i++){
                 <div className="rating-container">
 
                 <p >
-                  Rating: {item.rating.rate} &nbsp;<span className="ratings"> {renderStars(item.rating.rate)}</span>
+                  Rating: {item.rating.rate} &nbsp;<span className="ratings"> {renderStars(item.rating)}</span>
                 </p>
                  <p className="quantity">Quantity <span className="quantity-Number">0</span></p>
             
@@ -79,8 +127,13 @@ for(let i=1;i<=5;i++){
           })
         }
       </div>
+      <br>
+      </br>
+      <br></br>
+      <Footer/>
+   
     </div>
-  );
-};
+  )
+}
 
-export default HomeProducts;
+export default MobilesProduct

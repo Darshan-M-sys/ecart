@@ -24,8 +24,13 @@
   border-radius: 6px;
 
 }
+Link{
+  text-decoration: none;
+}
 .items{
   font-style: italic;
+  text-decoration: none;
+  color: black;
 }
 
 .icon{

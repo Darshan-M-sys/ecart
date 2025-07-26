@@ -107,9 +107,9 @@ gap:10px;
   gap:5px;
   transition:all 0.3s ease-in-out;
 }
-.rating{
+.ratings{
   font-size:20px;
-  color:yellow;
+  color:gold;
 }
 .rating-container{
   display:flex;

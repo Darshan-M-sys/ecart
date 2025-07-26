@@ -14,10 +14,11 @@ const Home = () => {
   return (
     <div>
      <Header/>
-     <ProductType />
+    
      <hr/>
      <Offer/>
      <HomeProducts/>
+     <br></br>
      <Footer/>
       
     </div>

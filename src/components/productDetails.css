@@ -1,0 +1,154 @@
+.product-space{
+text-align: center;
+width:80%;
+margin: auto;
+margin-top: 10px;
+
+}
+.item-category{
+  margin-top: 40px;
+ 
+  font-size: 50px;
+  font-style: italic;
+  text-transform: capitalize;
+    color: blue;
+
+}
+.container-space{
+  border-radius: 10px;
+  border: 2px solid blue;
+ background-color: aliceblue;
+}
+.product-image{
+  width:auto;
+  margin: 10px;
+  height: 300px;
+  border-radius: 10px;
+  transition: all 5s ease-in-out;
+}
+.product-image:hover{
+  transform: rotate(360deg);
+}
+
+.product-heading{
+  font-style: italic;
+ border-bottom:1px solid gainsboro ;
+ margin: 20px;
+}
+.product-price{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+}
+.rating-space{
+  margin:20px 10px ;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.rating{
+  color:rgb(130, 126, 120);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-transform: lowercase;
+
+}
+.space{
+  background-color: antiquewhite;
+  border-radius: 4px;
+  padding: 0 5px;
+}
+.sp{
+    background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  padding: 0 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.star{
+  color:gold;
+  font-size: 20px;
+}
+.product-button{
+  display: flex;
+ 
+  justify-content: space-between;
+  justify-items: center;
+  margin:0 20px;
+
+}
+.product-button button{
+  border-radius: 10px;
+}
+
+.product-description{
+  color:black;
+  margin: 20px;
+  font-size: 20px;
+}
+.logout-container{
+  text-align: left;
+  margin: 10px ;
+  background-color: none;
+} 
+.logout{
+   border: 0;
+  background-color: none;
+  font-size: 50px;
+  text-align: end;
+  transition: all 0.3s ease-in-out;
+}
+
+.logout:hover{
+  color: red;
+}
+
+.review-name{
+  color:blue;
+  font-size: 20px;
+text-align: start;
+margin-left: 20px;
+padding: 10px;
+}
+.review-date{
+  color:red;
+  text-align: end;
+  margin-right: 20px;
+  border-bottom:1px solid gainsboro ;
+  margin: 20px;
+}
+.return-policy{
+  color:green;
+  font-size: 15px;
+  padding: 5px;
+  text-decoration: underline;
+
+}
+.reviewer-message{
+font-style: italic;
+padding:10px;
+
+}
+
+@media screen and (max-width:600px) {
+  .item-category{
+    font-size: 25px;
+  }
+  .product-heading{
+    font-size: 20px;
+  }
+  .product-image{
+    height: 250px;
+  }
+  
+  .product-price{
+    margin: 10px;
+    padding:0 10px;
+   
+  }
+
+
+  .product-description{
+    font-size: 15px;
+  }
+}
