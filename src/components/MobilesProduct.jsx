@@ -10,6 +10,7 @@ import {Link} from 'react-router-dom'
 
 const MobilesProduct = () => {
    const[val,setVal]=useState('');
+   
     const renderStars = (rating) => {
 const star=[];
 for(let i=1;i<=5;i++){
@@ -27,11 +28,16 @@ for(let i=1;i<=5;i++){
 }
 const [product,setData]=useState([]);
  const query = val.toLowerCase();
+const[range,setRange]=useState([0,Infinity])
 
   const filtered = product.filter(p =>
+    (
     p.title.toLowerCase().includes(query) ||
     p.description.toLowerCase().includes(query)||
     p.category.toLowerCase().includes(query)
+  ) &&
+  ( p.price*10/2>=range[0] && p.price*10/2<=range[1]
+    )
   );
 useEffect(() => {
   fetch("https://dummyjson.com/products/category/smartphones")
@@ -55,7 +61,10 @@ useEffect(() => {
     <div>
       <header style={{paddingBottom:"50px"}}>
         <div className="header-container">
-
+<div className="header-search-bar-container">
+ <input  type="search" placeholder='Search here...'  value={val} onChange={(e)=>setVal(e.target.value)}></input>
+ <span className="search-icon"><span><CiSearch /> </span> </span>
+ </div>
 
 
 <div className="header-login-container">
@@ -79,7 +88,16 @@ useEffect(() => {
 <br>
 </br>
 <br></br>
+
       </header>
+      <div className="filter-container">
+  <button onClick={()=>setRange([10,1000])}>₹10-₹1000</button>
+  <button onClick={()=>setRange([1000,10000])}>₹1000-₹10000</button>
+  <button onClick={()=>setRange([10000,40000])}>₹10000-₹40000</button>
+  <button onClick={()=>setRange([1,70000])}>₹1-₹70000</button>
+
+
+</div>
            <div className="product-container">
         {
           filtered.map((item, index) => {

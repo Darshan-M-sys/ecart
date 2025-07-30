@@ -9,6 +9,7 @@ import { AiFillThunderbolt } from "react-icons/ai";
 import {Link} from 'react-router-dom'
 
 const AllProducts = () => {
+
    const[val,setVal]=useState('');
     const renderStars = (rating) => {
 const star=[];
@@ -27,12 +28,13 @@ for(let i=1;i<=5;i++){
 }
 const [product,setData]=useState([]);
  const query = val.toLowerCase();
+  const[range,setRange]=useState([0,Infinity]);
 
-  const filtered = product.filter(p =>
+  const filtered = product.filter(p =>(
     p.title.toLowerCase().includes(query) ||
     p.description.toLowerCase().includes(query)||
-    p.category.toLowerCase().includes(query)
-  );
+    p.category.toLowerCase().includes(query))&&(p.price*10/2>=range[0] && p.price*10/2<=range[1])
+  )
 useEffect(() => {
   fetch("https://dummyjson.com/products?limit=200")
     .then(res => {
@@ -85,6 +87,16 @@ useEffect(() => {
 </br>
 <br></br>
       </header>
+      <div className="filter-container">
+      <button onClick={()=>setRange([10,500])}
+       >₹10-₹1000</button>
+    
+      <button onClick={()=>setRange([500,1000])}>₹1000-₹10000</button>
+      <button onClick={()=>setRange([1000,10000])}>₹10000-₹40000</button>
+      <button onClick={()=>setRange([40000,70000])}>₹40000-₹70000</button>
+      
+      <button onClick={()=>setRange([1,70000])}>₹1-₹70000</button>
+      </div>
            <div className="product-container">
         {
           filtered.map((item, index) => {

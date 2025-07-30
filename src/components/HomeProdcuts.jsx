@@ -45,9 +45,11 @@ const HomeProduct = () => {
 
     fetchAllCategories();
   }, []);
-
-  const filtered = products.filter((item) =>
-    item.title.toLowerCase().includes(query)
+ const [range,setRange]=useState([0,Infinity])
+  const filtered = products.filter((item) =>(
+    item.title.toLowerCase().includes(query))&&(
+      item.price*10/2>=range[0] && item.price*10/2 <= range[1]
+    )
   );
 
   return (
@@ -69,6 +71,12 @@ const HomeProduct = () => {
         </div>
         <br /><br />
       </header>
+            <div className="filter-container">
+  <button onClick={()=>setRange([10,100])}>₹10-₹100</button>
+  <button onClick={()=>setRange([100,400])}>₹100-₹400</button>
+  <button onClick={()=>setRange([400,1500])}>₹400-₹1500</button>
+  <button onClick={()=>setRange([1,2000])}>₹1-₹2000</button>
+</div>
 
       <div className="product-container">
         {filtered.map((item, index) => {

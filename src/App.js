@@ -12,6 +12,8 @@ import Bike from './components/Bike'
 import Beauty from './components/Beauty'
 import Grocery from './components/Grocery'
 import Sports from './components/Sports'
+import Login from './components/Login'
+import Order from './components/Order'
 
 const App = () => {
   return (
@@ -30,6 +32,9 @@ const App = () => {
    <Route path="/Beauty" element={<Beauty/>}/>
    <Route path="/Grocery" element={<Grocery/>}/>
    <Route path="/Sports" element={<Sports/>}/>
+   <Route path="/Login" element={<Login/>}/>
+   <Route path="/Order/:id" element={<Order/>}/>
+   
 
   </Routes>
       

@@ -1,0 +1,62 @@
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(128, 128, 234);
+}
+.login > div{
+  background-color: aliceblue;
+  padding:30px ;
+  border-radius: 10px;
+
+
+}
+.login-input{
+
+  display: block;
+text-indent: 10px;
+border-radius: 20px;
+  margin-bottom: 23px;
+  font-size: 20px;
+  padding: 10px;
+  border: 0;
+  border: 1px solid gainsboro;
+outline-color:  #6b6bd2;
+
+
+
+}
+.login-button{
+  display: block;
+ width: 100%;
+border-radius: 20px;
+ background-color: rgb(75, 75, 250);
+  font-size: 20px;
+  padding: 10px;
+  color: white;
+border: 1px solid gainsboro;
+}
+.text{
+  text-align: center;
+  margin-top: 0px;
+  padding: 10px;
+  color:rgba(75, 75, 250, 0.886) ;
+  font-weight: 500;
+  
+}
+
+.user-icon-container{
+position: relative;
+ display: flex;
+ justify-content: end;
+}
+.user-icon{
+  position: absolute;
+  top: 12px;
+  font-size: 20px;
+  right:10px
+
+ 
+ 
+}

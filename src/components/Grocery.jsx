@@ -26,11 +26,13 @@ for(let i=1;i<=5;i++){
 }
 const [product,setData]=useState([]);
  const query = val.toLowerCase();
+ const [range,setRange]=useState([onabort,Infinity])
 
-  const filtered = product.filter(p =>
+  const filtered = product.filter(p =>(
     p.title.toLowerCase().includes(query) ||
     p.description.toLowerCase().includes(query)||
-    p.category.toLowerCase().includes(query)
+    p.category.toLowerCase().includes(query))
+    && (p.price*10/2 >=range[0] && p.price*10/2 <=range[1])
   );
 useEffect(() => {
   fetch("https://dummyjson.com/products/category/groceries")
@@ -73,6 +75,15 @@ useEffect(() => {
 </br>
 <br></br>
       </header>
+
+             <div className="filter-container">
+  <button onClick={()=>setRange([10,100])}>₹10-₹100</button>
+  <button onClick={()=>setRange([100,400])}>₹100-₹400</button>
+  <button onClick={()=>setRange([400,8500])}>₹400-₹9500</button>
+  <button onClick={()=>setRange([1,2000])}>₹1-₹2000</button>
+
+
+</div>
            <div className="product-container">
         {
           filtered.map((item, index) => {

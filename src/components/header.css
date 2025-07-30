@@ -97,7 +97,7 @@ cursor: pointer;
 .header-login-container{
     border:1px solid gainsboro;
 display:flex;
-gap: 10px;
+gap: 5px;
 justify-content: center;
 align-items: center;
  padding:3px;
@@ -139,7 +139,98 @@ align-items: center;
 
 }
 
-/* Tablets: screen width 768px and below */
+
+.spinner{
+  transition: all 0.3s ease-in-out;
+  width:100%;
+}
+.spinner:hover {
+  color:red;
+  width:100%;
+  transform: rotate(360deg);
+}
+.header-login-container h3:hover~.spinner{
+    color:red;
+  width:100%;
+  transform: rotate(360deg)
+
+}
+.spinner:hover~ .login-child{
+  visibility: visible;
+
+}
+
+.header-login-container:hover .login-child{
+    animation: move 0.2s linear;
+  visibility: visible;
+}
+
+
+.login-child-bg{
+  margin-top: 20px;
+    background-color:white;
+  color:red;
+  position: absolute;
+  left:-110px;
+  border-radius: 10px;
+  gap:20px;
+  padding:20px;
+  top:20px;
+
+}
+@keyframes move {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-child {
+  position: relative;
+  background-color: aliceblue;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease-in, opacity 0.3s ease-in;
+  line-height: 10px;
+  animation: none;
+}
+
+.header-login-container:hover .login-child {
+  visibility: visible;
+  opacity: 1;
+  animation: move 0.5s ease-out forwards;
+}
+
+
+.order-container{
+  color:blue;
+  padding:20px;
+}
+
+
+.login-child-bg::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: rotate(180deg);
+  
+  width: 0;
+  height: 0;
+
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid blue; 
+ 
+}
+
+
+
 @media screen and (max-width:400px) {
   .header-search-bar-container{
   width:200%;
@@ -148,6 +239,18 @@ align-items: center;
  margin: auto;
  
  width:80%;
+}
+.login-child-bg{
+  margin-top: 20px;
+    background-color:white;
+  color:red;
+  position: absolute;
+  left:-110px;
+  border-radius: 10px;
+  gap:20px;
+  padding:10px;
+  top:20px;
+
 }
 
 .header-logo-container img{
@@ -191,6 +294,10 @@ left: -30px;
   font-size: 23px;
   font-weight: 900;
 
+}
+
+.header-login-container{
+  gap:2px;
 }
 }
 

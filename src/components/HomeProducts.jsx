@@ -61,10 +61,10 @@ for(let i=1;i<=5;i++){
                   <button className='order-btn'>
                     <IoCartOutline className="cart-icon" /> Add Cart
                   </button>
-                  <button className="cart-btn">
+               <Link  className="items" to= {`/Order/${item.id}`} > <button className="cart-btn">
                     <AiFillThunderbolt className="cart-icon" /><span>Buy</span>
 
-                  </button>
+                  </button></Link>
                 </div>
                 <div className="rating-container">
 
