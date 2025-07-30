@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ecart/static/css/main.faf1a292.css",
-    "main.js": "/ecart/static/js/main.5842ee5a.js",
+    "main.css": "/ecart/static/css/main.42565f5e.css",
+    "main.js": "/ecart/static/js/main.757f80b0.js",
     "static/media/sports.png": "/ecart/static/media/sports.487ded13869aaac04e5a.png",
     "static/media/Electronic.png": "/ecart/static/media/Electronic.295c449362d468f20b86.png",
     "static/media/bike.png": "/ecart/static/media/bike.21d06ad8a79e316390ce.png",
@@ -20,12 +20,13 @@
     "static/media/beauty.png": "/ecart/static/media/beauty.39bd9a6cc851fb8ecc7c.png",
     "static/media/offer7.png": "/ecart/static/media/offer7.bfa17e0fa9f90d38ec84.png",
     "static/media/home.png": "/ecart/static/media/home.cacabc7caf68c241c8cc.png",
+    "static/media/icon.jpg": "/ecart/static/media/icon.ba310458d5578eea6267.jpg",
     "index.html": "/ecart/index.html",
-    "main.faf1a292.css.map": "/ecart/static/css/main.faf1a292.css.map",
-    "main.5842ee5a.js.map": "/ecart/static/js/main.5842ee5a.js.map"
+    "main.42565f5e.css.map": "/ecart/static/css/main.42565f5e.css.map",
+    "main.757f80b0.js.map": "/ecart/static/js/main.757f80b0.js.map"
   },
   "entrypoints": [
-    "static/css/main.faf1a292.css",
-    "static/js/main.5842ee5a.js"
+    "static/css/main.42565f5e.css",
+    "static/js/main.757f80b0.js"
   ]
 }
